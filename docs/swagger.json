@@ -1,0 +1,311 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "K-PaaS Container Platform Catalog Rest API",
+        "title": "Container Platform Catalog Rest API",
+        "termsOfService": "http://swagger.io/terms/",
+        "contact": {
+            "name": "API Support",
+            "email": "fiber@swagger.io"
+        },
+        "license": {
+            "name": "Apache 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+        },
+        "version": "1.0"
+    },
+    "host": "localhost:8093",
+    "basePath": "/",
+    "paths": {
+        "/api/charts/:charts/versions": {
+            "get": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Charts"
+                ],
+                "summary": "Get Chart Versions",
+                "responses": {}
+            }
+        },
+        "/api/clusters/:clusterId/namespaces/:namespace/releases": {
+            "get": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Releases"
+                ],
+                "summary": "List Releases",
+                "responses": {}
+            }
+        },
+        "/api/clusters/:clusterId/namespaces/:namespace/releases/:release": {
+            "get": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Releases"
+                ],
+                "summary": "Get Releases Info",
+                "responses": {}
+            },
+            "put": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Releases"
+                ],
+                "summary": "Upgrade Release",
+                "responses": {}
+            },
+            "post": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Releases"
+                ],
+                "summary": "Install Release",
+                "responses": {}
+            },
+            "delete": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Releases"
+                ],
+                "summary": "Uninstall Release",
+                "responses": {}
+            }
+        },
+        "/api/clusters/:clusterId/namespaces/:namespace/releases/:release/histories": {
+            "get": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Releases"
+                ],
+                "summary": "Get Release Histories",
+                "responses": {}
+            }
+        },
+        "/api/clusters/:clusterId/namespaces/:namespace/releases/:release/resources": {
+            "get": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Releases"
+                ],
+                "summary": "Get Release Resources",
+                "responses": {}
+            }
+        },
+        "/api/clusters/:clusterId/namespaces/:namespace/releases/:release/versions/:revision": {
+            "put": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Releases"
+                ],
+                "summary": "Rollback Release",
+                "responses": {}
+            }
+        },
+        "/api/hub/packages": {
+            "get": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "ArtifactHub"
+                ],
+                "summary": "Search Package ArtifactHub",
+                "responses": {}
+            }
+        },
+        "/api/hub/packages/:packageID/:version/values": {
+            "get": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "ArtifactHub"
+                ],
+                "summary": "Get Helm Package Chart Values",
+                "responses": {}
+            }
+        },
+        "/api/hub/packages/:repositories/:packages": {
+            "get": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "ArtifactHub"
+                ],
+                "summary": "Get Helm Package Chart Details",
+                "responses": {}
+            }
+        },
+        "/api/hub/repositories": {
+            "get": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "ArtifactHub"
+                ],
+                "summary": "Search Repo ArtifactHub",
+                "responses": {}
+            }
+        },
+        "/api/repositories": {
+            "get": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Repository"
+                ],
+                "summary": "List Repository",
+                "responses": {}
+            },
+            "post": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Repository"
+                ],
+                "summary": "Add Repository",
+                "responses": {}
+            }
+        },
+        "/api/repositories/:repositories": {
+            "put": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Repository"
+                ],
+                "summary": "Update Repository",
+                "responses": {}
+            },
+            "delete": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Repository"
+                ],
+                "summary": "Remove Repository",
+                "responses": {}
+            }
+        },
+        "/api/repositories/:repositories/charts": {
+            "get": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Repository"
+                ],
+                "summary": "List Repository Charts",
+                "responses": {}
+            }
+        },
+        "/api/repositories/:repositories/charts/:charts/info": {
+            "get": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Repository"
+                ],
+                "summary": "Get Chart Info",
+                "responses": {}
+            }
+        },
+        "/api/repositories/cache/clear": {
+            "delete": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Repository"
+                ],
+                "summary": "Clear Repo Cache",
+                "responses": {}
+            }
+        }
+    }
+}

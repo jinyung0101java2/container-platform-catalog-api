@@ -1,0 +1,210 @@
+basePath: /
+host: localhost:8093
+info:
+  contact:
+    email: fiber@swagger.io
+    name: API Support
+  description: K-PaaS Container Platform Catalog Rest API
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  termsOfService: http://swagger.io/terms/
+  title: Container Platform Catalog Rest API
+  version: "1.0"
+paths:
+  /api/charts/:charts/versions:
+    get:
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses: {}
+      summary: Get Chart Versions
+      tags:
+      - Charts
+  /api/clusters/:clusterId/namespaces/:namespace/releases:
+    get:
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses: {}
+      summary: List Releases
+      tags:
+      - Releases
+  /api/clusters/:clusterId/namespaces/:namespace/releases/:release:
+    delete:
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses: {}
+      summary: Uninstall Release
+      tags:
+      - Releases
+    get:
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses: {}
+      summary: Get Releases Info
+      tags:
+      - Releases
+    post:
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses: {}
+      summary: Install Release
+      tags:
+      - Releases
+    put:
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses: {}
+      summary: Upgrade Release
+      tags:
+      - Releases
+  /api/clusters/:clusterId/namespaces/:namespace/releases/:release/histories:
+    get:
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses: {}
+      summary: Get Release Histories
+      tags:
+      - Releases
+  /api/clusters/:clusterId/namespaces/:namespace/releases/:release/resources:
+    get:
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses: {}
+      summary: Get Release Resources
+      tags:
+      - Releases
+  /api/clusters/:clusterId/namespaces/:namespace/releases/:release/versions/:revision:
+    put:
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses: {}
+      summary: Rollback Release
+      tags:
+      - Releases
+  /api/hub/packages:
+    get:
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses: {}
+      summary: Search Package ArtifactHub
+      tags:
+      - ArtifactHub
+  /api/hub/packages/:packageID/:version/values:
+    get:
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses: {}
+      summary: Get Helm Package Chart Values
+      tags:
+      - ArtifactHub
+  /api/hub/packages/:repositories/:packages:
+    get:
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses: {}
+      summary: Get Helm Package Chart Details
+      tags:
+      - ArtifactHub
+  /api/hub/repositories:
+    get:
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses: {}
+      summary: Search Repo ArtifactHub
+      tags:
+      - ArtifactHub
+  /api/repositories:
+    get:
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses: {}
+      summary: List Repository
+      tags:
+      - Repository
+    post:
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses: {}
+      summary: Add Repository
+      tags:
+      - Repository
+  /api/repositories/:repositories:
+    delete:
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses: {}
+      summary: Remove Repository
+      tags:
+      - Repository
+    put:
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses: {}
+      summary: Update Repository
+      tags:
+      - Repository
+  /api/repositories/:repositories/charts:
+    get:
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses: {}
+      summary: List Repository Charts
+      tags:
+      - Repository
+  /api/repositories/:repositories/charts/:charts/info:
+    get:
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses: {}
+      summary: Get Chart Info
+      tags:
+      - Repository
+  /api/repositories/cache/clear:
+    delete:
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses: {}
+      summary: Clear Repo Cache
+      tags:
+      - Repository
+swagger: "2.0"
